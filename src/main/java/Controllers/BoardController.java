@@ -10,6 +10,11 @@ public class BoardController {
     Button backButton;
 
     @FXML
+    private void onClick(){
+        System.out.println("click");
+    }
+
+    @FXML
     private void backToMainMenu(){
         Navigator.goTo("Menu.fxml");
     }
