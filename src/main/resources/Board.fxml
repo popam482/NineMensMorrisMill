@@ -8,8 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardController">
+<AnchorPane fx:id="boardRoot" prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="75.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="600.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="450.0" layoutX="150.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="450.0" />
@@ -42,7 +41,7 @@
       <Circle id="slot16" fill="#a6a6a6" layoutX="375.0" layoutY="506.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
       <Circle id="slot17" fill="#a6a6a6" layoutX="525.0" layoutY="499.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
       <Circle id="slot15" fill="#a6a6a6" layoutX="225.0" layoutY="499.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
-      <Label layoutX="270.0" layoutY="260.0" text="TURN">
+      <Label fx:id="turnLabel" layoutX="270.0" layoutY="260.0" text="TURN">
          <font>
             <Font size="14.0" />
          </font>
