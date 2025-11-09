@@ -1,6 +1,9 @@
 package Model;
 
-public class Player {
+import GameLogic.GamePhase;
+import GameLogic.Move;
+
+public abstract class Player {
 
     private String name;
     private Pieces piecesColor;
@@ -24,7 +27,10 @@ public class Player {
     }
 
     public void removePiece(){
-        numberOfPieces--;
+        if(numberOfPieces>2)
+            numberOfPieces--;
     }
+
+    public abstract Move getNextMove(GamePhase currentPhase);
 
 }

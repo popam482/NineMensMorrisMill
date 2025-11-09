@@ -1,5 +1,6 @@
 package Controllers;
 
+import Model.LocalPlayer;
 import Model.Pieces;
 import Model.Player;
 import Navigator.Navigator;
@@ -36,8 +37,8 @@ public class MenuController {
             return;
         }
 
-        Player p1 = new Player(playerName1.get().trim(), Pieces.WHITE);
-        Player p2 = new Player(playerName2.get().trim(), Pieces.BLACK);
+        LocalPlayer p1 = new LocalPlayer(playerName1.get().trim(), Pieces.WHITE);
+        LocalPlayer p2 = new LocalPlayer(playerName2.get().trim(), Pieces.BLACK);
 
         BoardController.setPlayers(p1, p2);
 
