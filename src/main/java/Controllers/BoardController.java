@@ -2,6 +2,7 @@ package Controllers;
 
 import Model.PieceColor;
 import Model.Pieces;
+import Model.Player;
 import Navigator.Navigator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,18 +23,24 @@ public class BoardController {
 
     @FXML
     private Label nameLabel;
+
     @FXML
     private Label statusLabel;
 
-    static String playerName1, playerName2;
 
     private final Circle[] slots = new Circle[24];
 
 
     private final Pieces[] cells = new Pieces[24];
 
+    private static Player player1, player2;
 
     //private Handlers handlers;
+
+    public static void setPlayers(Player p1, Player p2){
+        player1=p1;
+        player2=p2;
+    }
 
     @FXML
     private void initialize() {
@@ -46,6 +53,10 @@ public class BoardController {
             }
             slots[i] = c;
             PieceColor.paintEmpty(c);
+        }
+
+        if(player1!=null && player2!=null){
+            nameLabel.setText(player1.getName()+"'s turn");
         }
 
         //handlers = new Handlers(slots, cells, colorLabel, statusLabel);
@@ -61,11 +72,6 @@ public class BoardController {
         //handlers.onSlotClick(idx);
     }
 
-    protected static void setPlayersNames(String name1, String name2){
-        playerName1=name1;
-        playerName2=name2;
-
-    }
 
     @FXML
     private void backToMainMenu(){

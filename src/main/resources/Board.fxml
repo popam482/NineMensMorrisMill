@@ -41,12 +41,12 @@
       <Circle id="slot16" fill="#a6a6a6" layoutX="375.0" layoutY="506.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
       <Circle id="slot17" fill="#a6a6a6" layoutX="525.0" layoutY="499.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
       <Circle id="slot15" fill="#a6a6a6" layoutX="225.0" layoutY="499.0" onMouseClicked="#onClick" radius="15.0" stroke="#a6a6a6" strokeType="INSIDE" />
-      <Label fx:id="turnLabel" layoutX="270.0" layoutY="260.0" text="TURN">
+      <Label fx:id="nameLabel" layoutX="270.0" layoutY="260.0" text="TURN">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="270.0" layoutY="398.0" text="TURN STATUS">
+      <Label fx:id="statusLabel" layoutX="270.0" layoutY="398.0" text="TURN STATUS">
          <font>
             <Font size="14.0" />
          </font>

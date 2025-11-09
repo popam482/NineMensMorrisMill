@@ -1,5 +1,7 @@
 package Controllers;
 
+import Model.Pieces;
+import Model.Player;
 import Navigator.Navigator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -34,8 +36,13 @@ public class MenuController {
             return;
         }
 
+        Player p1 = new Player(playerName1.get().trim(), Pieces.WHITE);
+        Player p2 = new Player(playerName2.get().trim(), Pieces.BLACK);
+
+        BoardController.setPlayers(p1, p2);
+
         Navigator.goTo("Board.fxml");
-        BoardController.setPlayersNames(playerName1.get().trim(), playerName2.get().trim());
+
     }
 
     @FXML
