@@ -1,13 +1,12 @@
 package Model;
 
-import GameLogic.GamePhase;
-import GameLogic.Move;
-
 public abstract class Player {
 
     private String name;
     private Pieces piecesColor;
-    private int numberOfPieces=9;
+    private int piecesToPlace=9;
+    private int piecesOnBoard=0;
+    private int piecesRemoved=0;
 
     public Player(String name, Pieces piecesColor){
         this.name=name;
@@ -22,15 +21,31 @@ public abstract class Player {
         return piecesColor;
     }
 
-    public int getNumberOfPieces(){
-        return numberOfPieces;
+    public int getPiecesToPlace(){
+        return piecesToPlace;
     }
 
-    public void removePiece(){
-        if(numberOfPieces>2)
-            numberOfPieces--;
+    public int getPiecesOnBoard(){
+        return piecesOnBoard;
     }
 
-    public abstract Move getNextMove(GamePhase currentPhase);
+    public int getPiecesRemoved(){
+        return piecesRemoved;
+    }
+
+    public void placePiece(){
+        if(piecesToPlace > 0) {
+            piecesToPlace--;
+            piecesOnBoard++;
+        }
+    }
+
+    public void removePieceFromBoard(){
+        if(piecesOnBoard>0){
+            piecesOnBoard--;
+            piecesRemoved++;
+        }
+    }
+
 
 }

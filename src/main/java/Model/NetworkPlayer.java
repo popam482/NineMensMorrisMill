@@ -1,8 +1,5 @@
 package Model;
 
-import GameLogic.GamePhase;
-import GameLogic.Move;
-
 public class NetworkPlayer extends Player {
 
     private final String connectionId;
@@ -16,8 +13,4 @@ public class NetworkPlayer extends Player {
         return connectionId;
     }
 
-    @Override
-    public Move getNextMove(GamePhase currentPhase) {
-        return null;
-    }
 }
